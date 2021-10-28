@@ -39,7 +39,7 @@ public class DataSource {
             client = HttpClient.newHttpClient();
             HttpRequest httpRequest = HttpRequest.newBuilder()
                     .uri(URI.create(url))
-                    .timeout(Duration.ofSeconds(5))
+                    .timeout(Duration.ofSeconds(10))
                     .build();
                 client.sendAsync(httpRequest, HttpResponse.BodyHandlers.ofString())
                         .join();
